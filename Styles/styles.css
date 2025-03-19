@@ -1,0 +1,121 @@
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+/* dictionary */
+
+:root{
+
+  --cream:#eee7dd;
+
+  --main: rgb(208, 205, 204);
+  --alt: rgb(174, 179, 188); 
+
+  --lightblue: rgb(173, 182, 190);
+  --darkblue: rgb(51, 66, 94);
+
+  --indigo:#171625;
+  
+  --headerfont: 3rem;
+  --largefont: 2.5rem;
+  --mediumfont: 1.4rem;
+  --smallfont: 1.25rem;
+  --textfont: 1rem;
+
+  /* font-family: "EB Garamond", serif; */
+
+}
+
+/* General */
+
+* {
+  box-sizing: border-box; /*accounts for margin and padding in sizing, easier to size */
+  margin: 0;
+  padding: 0;
+  letter-spacing: .1rem;
+  font-family: "EB Garamond", serif;
+}
+
+html{
+  /* overflow: auto; */
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+body {
+  line-height: 1.62; /* golden ratio */
+  background: var(--cream);
+}
+
+main{
+  border-top: var(--silverblue) solid 2px;
+}
+
+ul {
+  list-style-type: none; /* takes bullet points out */
+}
+
+h1{
+  color: var(--main);
+  font-weight: 700;
+  font-size: 2rem;
+  /* margin-left: 1em; */
+}
+
+h2{
+  text-align: center;
+  font-weight: 500;
+  font-size: var(--largefont);
+}
+
+h3{
+  font-size: var(--textfont);
+  color: var(--darkblue);
+}
+
+h4{
+  font-size: var(--textfont);
+  text-align: center;
+  font-weight: 300;
+}
+
+h5{
+  padding: 2rem;
+  text-align: center;
+}
+
+img {
+  width: 100%; /*keep images inside box container*/
+}
+
+a{
+  text-decoration: none; /* takes underline out*/
+}
+
+a:focus{
+  outline: var(--darkblue);
+}
+
+a:visited{
+  color: inherit; /* return visited a tag to initial color */
+}
+
+a:active{  
+  /* emulates pressing of button in 3d space */
+  top: 1px;
+}
+
+a[href^="tel"] {
+  color: inherit; /* inherit text color of parent element. */
+  text-decoration: none;
+}
+
+/* Navigation */
+
+/* Home */
+
+/* Units */
+
+/* Location */
+
+/* Contact */
