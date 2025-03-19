@@ -110,7 +110,21 @@ a[href^="tel"] {
   text-decoration: none;
 }
 
+#logo{
+  position: relative;
+  width: 15em;
+}
+
 /* Navigation */
+#navbar {
+  display: flex;
+  position: sticky;
+  flex-direction: column;
+  width: fit-content;
+  padding: 4em;
+  /* margin-right: auto; */
+  border: black solid 3px;
+}
 
 /* Home */
 
