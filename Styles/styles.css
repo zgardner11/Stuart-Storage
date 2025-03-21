@@ -1,6 +1,7 @@
 /* fonts */
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
 /* dictionary */
 
@@ -8,11 +9,10 @@
 
   --cream:#eee7dd;
 
-  --main: rgb(208, 205, 204);
+  --light: rgb(225, 225, 224);
   --alt: rgb(174, 179, 188); 
 
-  --lightblue: rgb(173, 182, 190);
-  --darkblue: rgb(51, 66, 94);
+  --darkblue: rgb(33, 66, 84);
 
   --indigo:#171625;
   
@@ -44,7 +44,7 @@ html{
 
 body {
   line-height: 1.62; /* golden ratio */
-  background: var(--cream);
+  background: var(--darkblue);
 }
 
 main{
@@ -56,21 +56,24 @@ ul {
 }
 
 h1{
-  color: var(--main);
+  color: var(--light);
   font-weight: 700;
-  font-size: 2rem;
-  /* margin-left: 1em; */
+  font-family: "Orbitron", sans-serif;
+  font-size: var(--headerfont);
+  display: flex;
+  align-items: center;
+  height: 10rem;
 }
 
 h2{
   text-align: center;
   font-weight: 500;
   font-size: var(--largefont);
+  
 }
 
 h3{
-  font-size: var(--textfont);
-  color: var(--darkblue);
+  font-size: var(--smallfont);
 }
 
 h4{
@@ -119,20 +122,22 @@ a[href^="tel"] {
 }
 
 /* Navigation */
+
 #navbar{
   display: flex;
   position: sticky;
-  top: 0;
   flex-direction: column;
+  top: 0;
   width: 15vw;
   height: 100vh;
-  border-right: black solid 2px;
+  background: var(--light);
+  border-right: var(--light) solid 2px;
 }
 
 .navlinks{
+  position: relative;
   text-align: center;
   width: 100%;
-  position: relative;
   top: 3rem;
 }
 
@@ -142,11 +147,15 @@ a[href^="tel"] {
   width: 100%;
   height: 100%;
   padding: 4rem 0;
-  border-bottom: black solid 2px;
+  font-size: var(--smallfont);
+  color: var(--darkblue);
+  font-weight: 500;
+  font-family: "Orbitron", sans-serif;
+  border-bottom: var(--darkblue) solid 1.5px;
 }
 
 .navlinks li:first-child{
-  border-top: black solid 2px;
+  border-top: var(--darkblue) solid 1.5px;
 }
 
 /* Home */
@@ -154,41 +163,73 @@ a[href^="tel"] {
 #home{
   display: flex;
 }
-
+ 
 .home-main{
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  border: blue solid 3px;
 }
 
 .header-h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: relative;
   top: 0;
   text-align: center;
   width: 100%;
   margin: auto;
-  border: black solid 2px;
+  border-bottom: var(--light) solid 2px;
 }
 
 .header-h2{
   position: relative;
-  top: 10rem;
+  top: 3rem;
   width: 100%;
-  border: blue solid 2px;
+  margin: auto;
   order: -1;
+  color: var(--light);
 }
 
-h1{
-  display: flex;
-  align-items: center;
-  height: 10rem;
+.header-h3{
+  position: relative;
+  top: 10rem;
+  color: var(--light);
+  margin: auto;
+  text-align: center;
 }
+
+.home-banner-img{
+  display: flex;
+  position: relative;
+  top: 8rem;
+  margin: auto;
+  width: 75%;
+  z-index: -1;
+}
+
+.home-number::after{
+  position: absolute;
+  bottom: 7rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 7%;
+  content: '.';
+  color: transparent;
+  background: var(--light);
+  height: 2px;
+}
+
+.home-address{
+  position: relative;
+  top: 2rem;
+}
+
 
 /* Units */
+
+#units{
+  height: 100vh;
+}
 
 /* Location */
 
