@@ -7,8 +7,6 @@
 
 :root{
 
-  --cream:#eee7dd;
-
   --light: rgb(225, 225, 224);
   --alt: rgb(174, 179, 188); 
 
@@ -125,7 +123,7 @@ a[href^="tel"] {
 
 #navbar{
   display: flex;
-  position: sticky;
+  position: fixed;
   flex-direction: column;
   top: 0;
   width: 15vw;
@@ -165,19 +163,23 @@ a[href^="tel"] {
 }
  
 .home-main{
-  width: 100%;
+  width: 85%;
+  margin-left: auto;
+  margin-top: 10rem;
 }
 
 .header-h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: fixed;
   top: 0;
   text-align: center;
-  width: 100%;
+  width: 85%;
   margin: auto;
+  z-index: 99;
   border-bottom: var(--light) solid 2px;
+  background-color: var(--darkblue);
 }
 
 .header-h2{
@@ -228,8 +230,47 @@ a[href^="tel"] {
 /* Units */
 
 #units{
-  height: 100vh;
+  /* height: 100vh; */
+  border-top: var(--light) solid 1.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-top: 15rem;
+  margin-left: auto;
+  padding: 5rem;
+  width: 85%;
 }
+
+#units header h2{
+  color: var(--light);
+}
+
+#units header h3{
+  color: var(--light);
+}
+
+.unit-sizes ul{
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.unit-sizes ul li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light);
+  width: 15rem;
+  height: 5rem;
+  border-radius: 7px;
+}
+
 
 /* Location */
 
