@@ -9,13 +9,11 @@
 
   --light: rgb(225, 225, 224);
   --alt: rgb(174, 179, 188); 
-
   --darkblue: rgb(33, 66, 84);
-
   --indigo:#171625;
-  
+
   --headerfont: 3rem;
-  --largefont: 2.5rem;
+  --largefont: 2rem;
   --mediumfont: 1.4rem;
   --smallfont: 1.25rem;
   --textfont: 1rem;
@@ -179,7 +177,6 @@ a[href^="tel"] {
   margin: auto;
   z-index: 99;
   border-bottom: var(--light) solid 2px;
-  background-color: var(--darkblue);
 }
 
 .header-h2{
@@ -208,9 +205,13 @@ a[href^="tel"] {
   z-index: -1;
 }
 
+.home-number{
+  position: relative;
+}
+
 .home-number::after{
   position: absolute;
-  bottom: 7rem;
+  bottom: -1rem;
   left: 0;
   right: 0;
   margin: auto;
