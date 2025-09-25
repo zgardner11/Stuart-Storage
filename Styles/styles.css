@@ -128,6 +128,7 @@ a[href^="tel"] {
   height: 100vh;
   background: var(--light);
   border-right: var(--light) solid 2px;
+  z-index: 3;
 }
 
 .navlinks{
@@ -175,8 +176,9 @@ a[href^="tel"] {
   text-align: center;
   width: 85%;
   margin: auto;
-  z-index: 99;
+  z-index: 2;
   border-bottom: var(--light) solid 2px;
+  background-color: var(--darkblue);
 }
 
 .header-h2{
@@ -231,7 +233,6 @@ a[href^="tel"] {
 /* Units */
 
 #units{
-  /* height: 100vh; */
   border-top: var(--light) solid 1.5px;
   display: flex;
   justify-content: center;
@@ -240,36 +241,74 @@ a[href^="tel"] {
   position: relative;
   margin-top: 15rem;
   margin-left: auto;
-  padding: 5rem;
+  padding: 3rem;
   width: 85%;
 }
 
-#units header h2{
+.unit-header{
   color: var(--light);
+  position: relative;
+  padding: 0 0 2rem;
+  margin: 0 auto 2rem;
+  font-size: var(--largefont);
+}
+
+.unit-header::after{
+  position: absolute;
+  content: '';
+  width: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 50%;
+  background-color: var(--light);
+  opacity: .8;
+  margin: auto;
+}
+
+.unit-subheader{
+  color: var(--light);
+  text-align: center;
+}
+
+.unit-subheader h3{
+  padding-top: 2rem;
 }
 
 #units header h3{
+  margin: 0 0 2rem;
   color: var(--light);
 }
 
-.unit-sizes ul{
-  position: relative;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+.unit-chart{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, 14em);
+    width: fit-content;
+    background: var(--darkgrey2);
+    color: var(--navbar);
+    padding: 1em;
+    border-radius: 2px;
+    margin: auto;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 500;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.548);
+    /* border: orange solid 2px; */
 }
 
-.unit-sizes ul li{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--light);
-  width: 15rem;
-  height: 5rem;
-  border-radius: 7px;
+.unit-chart article{
+  border: var(--light) solid 2px;
+  color: var(--light);
+  font-size: var(--mediumfont);
+}
+
+.unit-chart article ul li{
+  border-bottom: var(--light) 2px solid;
+  padding: 1.5rem;
 }
 
 
