@@ -12,9 +12,9 @@
   --darkblue: rgb(33, 66, 84);
   --indigo:#171625;
 
-  --headerfont: 3rem;
-  --largefont: 2rem;
-  --mediumfont: 1.4rem;
+  --headerfont: 3.2rem;
+  --largefont: 2.25rem;
+  --mediumfont: 1.5rem;
   --smallfont: 1.25rem;
   --textfont: 1rem;
 
@@ -35,7 +35,7 @@
 html{
   /* overflow: auto; */
   scroll-behavior: smooth;
-  scroll-padding-top: 4rem;
+  scroll-padding-top: 15vh;
 }
 
 body {
@@ -58,7 +58,7 @@ h1{
   font-size: var(--headerfont);
   display: flex;
   align-items: center;
-  height: 10rem;
+  height: 15vh;
 }
 
 h2{
@@ -69,11 +69,11 @@ h2{
 }
 
 h3{
-  font-size: var(--smallfont);
+  font-size: var(--mediumfont);
 }
 
 h4{
-  font-size: var(--textfont);
+  font-size: var(--smallfont);
   text-align: center;
   font-weight: 300;
 }
@@ -115,6 +115,18 @@ a[href^="tel"] {
   top: 1.5rem;
   margin: auto;
   display: flex;
+}
+
+.sub-main-section{
+  border-top: var(--light) solid 1.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-left: auto;
+  padding: 3rem;
+  width: 85%;
 }
 
 /* Navigation */
@@ -203,7 +215,7 @@ a[href^="tel"] {
   position: relative;
   top: 8rem;
   margin: auto;
-  width: 75%;
+  width: 55%;
   z-index: -1;
 }
 
@@ -229,20 +241,10 @@ a[href^="tel"] {
   top: 2rem;
 }
 
-
 /* Units */
 
 #units{
-  border-top: var(--light) solid 1.5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  margin-top: 15rem;
-  margin-left: auto;
-  padding: 3rem;
-  width: 85%;
+    margin-top: 15rem;
 }
 
 .unit-header{
@@ -313,5 +315,11 @@ a[href^="tel"] {
 
 
 /* Location */
+
+#location img{
+  display: flex;
+  width: 65%;
+  margin: 2rem auto;
+}
 
 /* Contact */
