@@ -161,6 +161,12 @@ a[href^="tel"] {
   font-weight: 500;
   font-family: "Orbitron", sans-serif;
   border-bottom: var(--darkblue) solid 1.5px;
+  transition: all 200ms ease-in-out;
+}
+
+.navlinks li a:hover{
+  background: var(--darkblue);
+  color: var(--light);
 }
 
 .navlinks li:first-child{
@@ -245,6 +251,10 @@ a[href^="tel"] {
 
 #units{
     margin-top: 15rem;
+}
+
+#units .navlinks li a:active{
+  background: var(--darkblue);
 }
 
 .unit-header{
