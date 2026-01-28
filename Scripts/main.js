@@ -1,49 +1,37 @@
-// Product navigation
+// Hamburger menu for mobile navigation
 
-const products = document.querySelectorAll(".product-section");
+const burger = document.querySelector('.burger');
+const navMenu = document.querySelector('.navlinks-menu');
 
-const options = {
-  root: null,
-  threshold: .43,
-  rootMargin: "-110px"
-};
+burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navMenu.classList.toggle('active');
 
-const observer = new IntersectionObserver(function (entries) {
+    // Toggle color of nav button on click
 
-  // console.log(entries)
+    burger.classList.toggle('nav-invert');
+    // burger.classList.remove('nav-invert');
+})
 
-  entries.forEach((entry) => {
+let viewportWidth = window.innerWidth;
+const logo = document.getElementById('logo');
 
-    const navProducts = document.querySelectorAll(".product-nav");
+function logoInvert () {
+    if (viewportWidth <= 1024){
+        logo.setAttribute('src', 'Media/logowhite.PNG')
+    } 
+}
 
-    function activeNav() {
-      for (const navProduct of navProducts) {
-        if(entry.target.id === navProduct.dataset.label){
-            navProduct.classList.add("product-nav-active");
+logoInvert();
 
-            // console.log("data: " + navProduct.dataset.label);
-            // console.log("target: " + entry.isIntersecting);
-        }
-      }
+// Drop down items
+
+function toggleClass( element ) {
+    let data = 'dataHeader hidden';
+
+    if ( element.className == data){
+        element.className = data.replace('hidden', 'active');
+    } else {
+        element.className = data;
     }
-
-      if(entry.isIntersecting) {
-        activeNav();
-      }
-
-      else{
-        
-        for (const navProduct of navProducts) {
-          navProduct.classList.remove("product-nav-active");
-        }
-
-        return
-      }
-      
-    });
-
-}, options);
-
-products.forEach(product => {
-  observer.observe(product);
-});
+}
