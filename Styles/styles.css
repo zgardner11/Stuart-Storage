@@ -293,6 +293,15 @@ a[href^="tel"] {
   color: var(--light);
 }
 
+.unit-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.unit-img{
+  width: 60%;
+}
 .unit-chart{
     position: relative;
     display: grid;
