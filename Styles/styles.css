@@ -313,12 +313,11 @@ a[href^="tel"] {
     color: var(--navbar);
     padding: 1em;
     border-radius: 2px;
-    margin: auto;
+    margin: 2rem;
     text-align: center;
     font-size: .9em;
     font-weight: 500;
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.548);
-    /* border: orange solid 2px; */
 }
 
 .unit-chart article{
