@@ -12,6 +12,9 @@
   --darkblue: rgb(33, 66, 84);
   --indigo:#171625;
 
+  --orange: #962d06;
+  --orange2: #e0440c;
+
   --headerfont: 3.2rem;
   --largefont: 2.25rem;
   --mediumfont: 1.5rem;
@@ -272,7 +275,7 @@ a[href^="tel"] {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 2.5px;
   border-radius: 50%;
   background-color: var(--light);
   opacity: .8;
@@ -302,6 +305,7 @@ a[href^="tel"] {
 .unit-img{
   width: 60%;
 }
+
 .unit-chart{
     position: relative;
     display: grid;
@@ -341,6 +345,89 @@ a[href^="tel"] {
 }
 
 /* Contact */
+
+#contact{
+  width: 85%;
+  margin-left: auto;
+  border-top: var(--light) solid 1.5px;
+}
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+}
+
+.contact-form *{
+  width: 30vw;
+  font-size: var(--smallfont);
+  /* margin: 1rem auto; */
+}
+
+.contact-form input{
+  padding: 1rem;
+  margin: 1rem auto 2.5rem;
+}
+
+.contact-form textarea{
+  height: 10vh;
+  margin-top: 1rem;
+  padding: .5rem 1rem;
+}
+
+.contact-form button{
+  display: flex;
+  background-color: var(--orange);
+  color: var(--light);
+  padding: 1rem 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  transition: all 200ms ease-in-out;
+  margin-top: 3rem; 
+}
+
+.contact-form button:hover{
+  background-color: var(--orange2);
+}
+
+.contact-header{
+  position: relative;
+  margin-top: 2rem;
+  color: var(--light);
+  width: fit-content;
+  margin: 2rem auto;
+  padding-bottom: 2rem;
+}
+
+.contact-header::after{
+  position: absolute;
+  content: '';
+  width: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  border-radius: 50%;
+  background-color: var(--light);
+  opacity: .8;
+  margin: auto;
+}
+
+.contact-h3{
+  margin: auto;
+  width: fit-content;
+  color: var(--light);
+  font-size: var(--smallfont);
+}
+
+#contact h4{
+  text-align: start;
+  color: var(--light);
+}
 
 /* Mobile Responsiveness */
 
@@ -541,6 +628,19 @@ and (max-width: 1240px)
 
 
   /* Contact */
+
+  #contact{
+    width: 100%;
+    margin: auto;
+  }
+
+  .contact-form * {
+    width: 100%;
+  }
+
+  .contact-h3{
+    padding: 0 2rem; 
+  }
 
   /* Footer */
 
